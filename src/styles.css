@@ -2,6 +2,7 @@ body {
     background-image: url("assets/back.jpeg");
     background-color: #ffd6c2;
     background-repeat: no-repeat;
-    background-position: center;
-    min-height: 400px;
+    /* background-position: center; */
+    min-height: 650px;
+    background-size: 100% 100%;
    }
