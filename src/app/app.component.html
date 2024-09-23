@@ -1,0 +1,48 @@
+
+<br><br>
+
+<div class="container">
+  <div class="row">
+    <div class="row">
+      <div class="form-group ">
+        <span>Country</span>
+        <select [(ngModel)]="country" name="Country" class="form-control" (change)="clear(1)">
+          <option *ngFor="let opt of getOptions(1)" [value]="opt[0]">
+            {{opt[1].countryName}}
+          </option>
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <div *ngIf = "country" class="form-group ">
+        <span>State</span>
+        <select [(ngModel)]="state" name="State" class="form-control" (change)="clear(2)">
+          <option *ngFor="let opt of getOptions(2)" [value]="opt[0]">
+            {{opt[1].stateName}}
+          </option>
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <div *ngIf = "state" class="form-group "> 
+        <span>District</span>
+        <select [(ngModel)]="district" name="District" class="form-control" (change)="clear(3)">
+          <option *ngFor="let opt of getOptions(3)" [value]="opt[0]">
+            {{opt[1].districtName}}
+          </option>
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <div *ngIf = "district" class="form-group ">
+        <span>Place</span>
+        <select [(ngModel)]="place" name="Place" class="form-control">
+          <option *ngFor="let opt of getOptions(4)" [value]="opt[0]">
+            {{opt[1].placeName}}
+          </option>
+        </select>
+      </div>
+    </div>
+  </div>
+</div>
+
